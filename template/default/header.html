@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$web_name} {if $cate.name} - {$cate.name} {/if}  {if $title!=$cate.name} - {$title} {/if}  {if $page} - 第{$page}张 {/if} - Powered by {$sys_name}</title>
+<meta name="keywords" content="{$web_keywords},{$cate.ckeywords},{$title}">
+<meta name="description" content="{$web_description},{$cate.cdescription},{$title}">
+<link rel="stylesheet" href="{$web_path}images/default/imgcms.css" media="screen" />
+<script src="{$web_path}images/js/jquery-1.4.4.min.js"></script>
+<script src="{$web_path}images/js/system.js"></script>
+<link href="images/css/topmain.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" src="{$web_path}images/js/show1.min.js" type="text/javascript"></script>
+<link href="{$web_path}images/css/indexshow.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="{$web_path}images/js/indexshow.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="{$web_path}images/css/heimgcms.css" />
+<script src="{$web_path}images/js/jquery-1.7.2.min.js"></script>
+<script src="{$web_path}images/js/tools.min.js"></script>
+
+<script type="text/javascript">
+var web_script = "{$web_script}";
+var web_url = "{$web_url}";
+var web_name = "{$web_name}";
+</script>
+</head>
+
+<body> 
+<div class="wrap">
+	<div class="header">
+		<h1 class="logo"><a href="{$web_url}"><span>IMGCMS</span><img src="{$web_path}images/logo.png" alt="{$web_name}" /></a></h1>
+		<div class="ad_top">{@adsense('banner')}</div>
+		<!-- 导航 开始 -->
+		<div>
+            <ul id="navv">
+               <li><a href="{$web_url}">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp首&nbsp&nbsp页&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+                    <!--{foreach $cateTree as $val}-->
+                        <!--{if $val.status}-->
+                        <li cid="{$val.cid}"><a href="{$val.url}" {if $cid==$val.cid}class="current"{/if}>{$val.name}</a></li>
+                        <!--{/if}-->
+          			<!--{/foreach}-->
+					
+                
+            </ul>
+        </div>
+		<!-- 导航 结束 -->
+	</div>
